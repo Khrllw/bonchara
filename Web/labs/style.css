@@ -102,10 +102,12 @@ hr {
     width: 100%;
     flex-direction: row;
 }
-form{
+
+form {
     background-color: rgba(245, 245, 245, 0.1);
     margin: 4%;
 }
+
 footer {
     display: flex;
     flex-direction: column;

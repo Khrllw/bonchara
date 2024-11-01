@@ -13,9 +13,9 @@ document.getElementById("btn").addEventListener("click", function () {
 });
 
 addEventListener("dblclick", (event) => {
-    if (form.style.backgroundColor != "lightgrey"){
-        form.style.backgroundColor = "lightgrey";}
-    else{
+    if (form.style.backgroundColor != "lightgrey") {
+        form.style.backgroundColor = "lightgrey";
+    } else {
         form.style.backgroundColor = "lightblue";
     }
 });
