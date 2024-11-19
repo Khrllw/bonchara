@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class lab_3 {
     public static void main(String[] args) throws InterruptedException {
-        System.out.print("-------------- \033[1;31mLOG THREADS\033[0m --------------\n");
+        System.out.print("---------------- \033[1;31mLOG THREADS\033[0m ----------------\n");
         System.out.print("Enter values:\n\t");
         // считывание данных
         Scanner in = new Scanner(System.in);
@@ -15,11 +15,14 @@ public class lab_3 {
         double[] result = new double[inp_data.length];
         LogClc new_thread;
         int i = 0;
-        //8, 43857, 4357, 3, 2, 0, 743, 3
         do {
+            // создание потока
             new_thread = new LogClc("LogClc " + inp_data[i], Integer.parseInt(inp_data[i]));
+            // запуск потока
             new_thread.start();
+            // обавление потока в очередь исполнения (по порядку)
             new_thread.join();
+            // запись вычисленного значения в результирующий массив
             result[i] = new_thread.log;
             i++;
         } while (i < inp_data.length);
