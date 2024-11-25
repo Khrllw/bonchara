@@ -1,9 +1,11 @@
+CODE = 6000
 DOMAINS
  realList = real*
  realList2D = realList*
 
 CONSTANTS
  currency = 3
+
  
 PREDICATES
  start()
@@ -24,24 +26,25 @@ PREDICATES
  min(real, real, real)
  positiveValue(real)
 
+ qEquationCalc(real, real, real, real)
+ qEquation(real, real, real, real, real, real, real)
+ findSolutionsWithX(real, real, real, real, real, real)
+ findSolutionsWithY(real, real, real, real, real, real)
+
  getLenth(real, real, real)
  getLenth2D(realList, realList, real)
  differentPoints(realList, realList)
-sumPoints(realList, realList, realList)
+ sumPoints(realList, realList, realList)
 
  checkRhombus(realList2D)
- checkRhombusSidesCombinations(realList2D, realList2D)
+ checkRhombusSidesCombinations(realList2D, realList2D, integer)
 
+/* 
 diskriminantPositive(real, real, real, real, real, real)
-diskriminantZero(real, real, real, real, real, real)
-diskriminant(real, real, real, real, real, real)
+ diskriminantZero(real, real, real, real, real, real)
+ diskriminant(real, real, real, real, real, real)
+*/
 
-/*
- onCircle(realList, real, realList)
- onRhombus(realList2d, realList)
- onSegment(realList, realList, realList)
- onLine(realList, realList, realList)
- */
  findIntersection(realList, real, real, real, real)
  findIntersections(realList2D, realList, real)
  findLine(realList, realList, real,  real, real)
@@ -71,7 +74,8 @@ CLAUSES
 	allRight(CircleExitCode),
 
 	inputRhombus(RhombusCoordinates, RhobmusExitCode),
-	allRight(RhobmusExitCode),	
+	allRight(RhobmusExitCode),
+	
 	write("All Right"), nl.
 
 % Ввод параметров окружности 
@@ -105,7 +109,8 @@ CLAUSES
 	differentPoints(Point2, Point4),
 	differentPoints(Point3, Point4), !,
 	write("Lenth norm"), nl,
-	checkRhombusSidesCombinations([Point1, Point2, Point3, Point4], NiceRhombus),
+	checkRhombusSidesCombinations([Point1, Point2, Point3, Point4], NiceRhombus, CheckExitCode), 
+	CheckExitCode = 0,
 	ExitCode = 0, !;
 	
 	write("[ ERROR ] It's not a rhombus"),
@@ -113,7 +118,7 @@ CLAUSES
 	Point1 = [0, 0],
 	Point2 = [0, 0],
 	Point3 = [0, 0],
-	Point4 = [0, 0].
+	Point4 = [0, 0], NiceRhombus = [Point1, Point2, Point3, Point4].
 	
 
 % Ввод координат точки
@@ -178,34 +183,6 @@ CLAUSES
 
 % -------------------- Геометрические операции ------------------------	
 
-% Формулы рассчёта точек пересечения
-% r^2 = (x - a)^2 + (y - c)^2
-
-% kX + gY + b = 0 
-% Y = -(kX + b)/g
-
-% r^2 = (X - a) ^ 2 + (-(kX + b)/g - c) ^ 2
-% (X - a) ^ 2 + (-(kX + b)/g - c) ^ 2 - r^2 = 0
-% X^2 - (2a)X + (a^2) + ((k/g)X + (bg + c))^2 - r^2 = 0
-% X^2 - (2a)X + ((k/g)X + (bg + c))^2 - r^2 + (a^2)= 0
-
-% X^2 - (2a)X + ((k/g)^2)X^2 + (2k(bg + c)/g)X + (bg + c)^2 - r^2 + (a^2)= 0
-
-% (((k/g)^2) + 1) * X^2 + ((2k(bg + c)/g) - 2a) * X + (bg + c)^2 - r^2 + (a^2)= 0
-% D = ((2k(bg + c)/g) - 2a) ^2 - 4*(((k/g)^2) + 1) * ((bg + c)^2 - r^2 + (a^2))
-% D > 0:
-	
-% D = 0:
-	
-% D < 0:
-	
-
-
-
-% r^2 = (x - x0)^2 + (kx + b -x0)^2
-% r^2 = x^2 -2xx0 + x0^2 + kx^2 + 2(b - x0)kx +(b - x0)^2
-% X^2 - (2x0)X - 
-
 % Определение длины одномерного отрезка
  getLenth(X1, X2, Lenth):-
 	Lenth = abs(X1 - X2).
@@ -221,15 +198,21 @@ CLAUSES
 	not(equal(Point1X, Point2X));
 	not(equal(Point1Y, Point2Y)). 
 
- checkRhombusSidesCombinations([Point1, Point2, Point3, Point4], NiceRhombus):-
+% Упорядочивание точек ромба
+ checkRhombusSidesCombinations([Point1, Point2, Point3, Point4], NiceRhombus, ExitCode):-
 	checkRhombus([Point1, Point2, Point3, Point4]), 
-	NiceRombus = [Point1, Point2, Point3, Point4], !;
+	NiceRhombus = [Point1, Point2, Point3, Point4],
+	ExitCode = 0, !;
 	
 	checkRhombus([Point1, Point3, Point2, Point4]),
-	NiceRombus = [Point1, Point3, Point2, Point4], !;
+	NiceRhombus = [Point1, Point3, Point2, Point4],
+	ExitCode = 0, !;
 
 	checkRhombus([Point1, Point2, Point4, Point3]),
-	NiceRombus = [Point1, Point2, Point4, Point3].
+	NiceRhombus = [Point1, Point2, Point4, Point3],
+	ExitCode = 0, !;
+	
+	ExitCode = 1.	
 
 
 % Проверка "Введённый четырехугольник - ромб"
@@ -239,146 +222,118 @@ CLAUSES
 	getLenth2D(Point2, Point3, Lenth23),
 	getLenth2D(Point3, Point4, Lenth34),
 	getLenth2D(Point4, Point1, Lenth41),
+
 	equal(Lenth12, Lenth23, Lenth34, Lenth41),
 
 	% Диагонали пересекаются в их центрах
 	sumPoints(Point1, Point3, LeftPoint),
 	sumPoints(Point2, Point4, RightPoint),
-	
+
 	LeftPoint = RightPoint.
 
+% Поиск уравнения прямой по двум известным точкам
 % kX + gY + b = 0 
  findLine([LineX1, LineY1], [LineX2, LineY2], K, G, B):-
+
+	% Наклонная прямая
 	LineX1 <> LineX2, LineY1 <> LineY2, 
 	G = -1,
 	K = (LineY2 - LineY1) / (LineX2 - LineX1),
 	B = LineY1 - K * LineX1, !;
-	
+
+	% Вертикальная прямая
 	LineX1 = LineX2, LineY1 <> LineY2,
 	G = 0,
 	K = -1,
-	min(LineX1, LineX2, B), !;
-
+	B = LineX1, !;
+	
+	% Горизонтальная прямая
 	LineX1 <> LineX2, LineY1 = LineY2,
 	G = -1,
 	K = 0,
-	min(LineY1, LineY2, B), !.
+	B = LineY1.
 
-diskriminantPositive(D, B, A, K, G, Br):-
-	D > 0, 
-
-	Root1 = (-B + D) /(2 * A),
-	write(Root1), nl,
-	Y1 = (-K * Root1 - Br) / G,
-	write(Y1), nl,
-
-	Root2 = (-B - D) /(2 * A),
-	write(Root2), nl,
-	Y2 = (-K * Root2 - Br) / G,
-	write(Y2), nl.
-
-diskriminantZero(D, B, A, K, G, Br):-
-	D = 0,
-	X = -B / (2 * A),
-	write(X), nl,
-	Y = (-K * X - Br) / G,
-	write(Y), nl.
-	
-	
-diskriminant(Value, B, A, K, G, Br):-
-	diskriminantPositive(Value, B, A, K, G, Br),!;
-	diskriminantZero(Value, B, A, K, G, Br),!.
+qEquationCalc(DiskrSqrt, A, B, X):-
+	X = (DiskrSqrt - B) / (2 * A).
 
 
-% r^2 = (X - a) ^ 2 + (-(kX + b)/g - c) ^ 2
-findIntersection([CentreX, CentreY], Radius, K, G, Br):-
+qEquation(Diskr, A, B, C, X1, X2, N):-
+	Diskr > 0, N = 2,
+	DiskrSqrt = sqrt(Diskr),
+	NegDiskrSqrt = -DiskrSqrt,	
+	qEquationCalc(NegDiskrSqrt, A, B, X1),
+	qEquationCalc(DiskrSqrt, A, B, X2);
+
+	Diskr = 0, N = 1, X2 = 0,
+	DiskrSqrt = sqrt(Diskr),
+	qEquationCalc(DiskrSqrt, A, B, X1), !;
+
+	N = 0, X1 = 0, X2 = 0.
+
+
+findSolutionsWithX(X1, X2, N, K, G, B):-
+	N = 1,
+	Y = (-K * X1 - B)/G,
+	write("Xint = "), write(X1), nl,
+	write("Yint = "), write(Y), nl, nl;
+
+	N = 2,
+	Y1 = (-K * X1 - B)/G,
+	write("Xint = "), write(X1), nl, 
+	write("Yint = "), write(Y1), nl, nl,
+	Y2 = (-K * X2 - B)/G,
+	write("Xint = "), write(X2), nl, 
+	write("Yint = "), write(Y2), nl, nl.
+
+findSolutionsWithY(Y1, Y2, N, K, G, B):-
+	N = 1,
+	write("Xint = "), write(B), nl, 
+	write("Yint = "), write(Y1), nl, nl;
+
+	N = 2,
+	write("Xint = "), write(B), nl, 
+	write("Yint = "), write(Y1), nl, nl,
+
+	write("Xint = "), write(B), nl, 
+	write("Yint = "), write(Y2), nl, nl.
+
+% Поиск точек перечения прямой и окружности
+% Общий вид уравнения: 
+%	R^2 = (X - x_c) ^ 2 + (-(kX + b)/g - y_c) ^ 2
+
+% При G = 0:
+%	R^2 = (B - x_c)^2 + (Y - y_c)^2
+%	R^2 = (B - x_c)^2 + Y^2 - 2Yy_c + y_c^2
+%	(Y)^2 - 2y_c * (Y) + y_c^2 + (B - x_c)^2 - R^2
+ 
+ findIntersection([CentreX, CentreY], Radius, K, G, B):-
 	G <> 0,
-	A = ( K / G ) * ( K / G ) + 1, 
-	B = (2 * K* (Br*G + CentreY)/ G) - 2 * CentreX,
-	C = (Br * G + CentreY) * (Br * G + CentreY) - Radius * Radius + (CentreX * CentreX),
-	D = sqrt(B * B - 4* A* C),
-	CentreX = 0, CentreY = 0,
-	diskriminant(D, B, A, K, G, Br).
+	% Решение относительно X
+	A_coef = ( K * K ) / ( G * G ) + 1, 
+	B_coef = (2 * K * (B + CentreY * G) / (G * G)) - 2 * CentreX,
+	C_coef = (B / G + CentreY) * (B / G + CentreY) - Radius * Radius + (CentreX * CentreX),
+	Diskr = B_coef * B_coef - 4 * A_coef* C_coef,
+	qEquation(Diskr, A_coef, B_coef, C_coef, X1, X2, N),
+	findSolutionsWithX(X1, X2, N, K, G, B);
+	
+	G = 0,
+	% Решение относительно Y
+	A_coef = 1, 
+	B_coef = -2 * CentreY,
+	C_coef = (B - CentreX) * (B - CentreX) - Radius * Radius + CentreY * CentreY,
+	Diskr = B_coef * B_coef - 4 * A_coef * C_coef,
+	qEquation(Diskr, A_coef, B_coef, C_coef, Y1, Y2, N),
+	findSolutionsWithY(Y1, Y2, N, K, G, B).
 
-	%Radius * Radius = (X - CentreX) * (X - CentreX) + ((K * X + B)/G - CentreY) * ((K * X + B)/G - CentreY),
-	%write(X), nl,
-	%Y = (-K * X - B) / G,
-	%write(Y), nl.
-
-
-findIntersections([Point1, Point2, Point3, Point4], CircleCentre, Radius):-
+% Поиск точек перечечения окружности со сторонами квадрата
+ findIntersections([Point1, Point2, Point3, Point4], CircleCentre, Radius):-
 	findLine(Point1, Point2, K, G, B), findIntersection(CircleCentre, Radius, K, G, B);
 	findLine(Point2, Point3, K, G, B), findIntersection(CircleCentre, Radius, K, G, B);
 	findLine(Point3, Point4, K, G, B), findIntersection(CircleCentre, Radius, K, G, B);
 	findLine(Point4, Point1, K, G, B), findIntersection(CircleCentre, Radius, K, G, B).
-	
-
-/*
-
-% Проверка "Точка принадлежит окружности"
- onCircle(CircleCentre, Radius, Point):-
-	getLenth2D(Point, CircleCentre, Lenth),
-	SqrtLenth = sqrt(Lenth),
-	roundReal(SqrtLenth, RoundedLenth, currency),
-	Radius = RoundedLenth.
-
-	
-% Проверка "Точка принадлежит ромбу и окружности"
- onRhombus([Point1, Point2, Point3, Point4], Point):-
-	onSegment(Point1, Point2, Point);
-	onSegment(Point2, Point3, Point);
-	onSegment(Point3, Point4, Point);
-	onSegment(Point4, Point1, Point).
 
 
-
-% Проверка "Точка принадлежит стороне ромба"
- onSegment([LineX1, LineY1], [LineX2, LineY2], [PointX, PointY]):-
-	onLine([LineX1, LineY1], [LineX2, LineY2], [PointX, PointY]),
-	max(LineX1, LineX2, XMax),
-	min(LineX1, LineX2, XMin),
-	max(LineY1, LineY2, YMax),
-	min(LineY1, LineY2, YMin),
-	XMin <= PointX,  PointX <= XMax,
-	YMin <= PointY,  PointY <= YMax.
-
-% Проверка "Точка принадлежит прямой отрезка ромба"
- onLine([LineX1, LineY1], [LineX2, LineY2], [PointX, PointY]):-
-	LineX1 <> LineX2, 
-	LineY1 <> LineY2,
-	K = (LineY2 - LineY1) / (LineX2 - LineX1),
-	B = LineY1 - K * LineX1,
-	PointY = K * PointX + B .
-
-% Проверка "Точка принадлежит ромбу"
- onRhombus([Point1, Point2, Point3, Point4], Point):-
-	onSegment(Point1, Point2, Point);
-	onSegment(Point2, Point3, Point);
-	onSegment(Point3, Point4, Point);
-	onSegment(Point4, Point1, Point).
-
-% Проверка "Точка принадлежит отрезку"
- onSegment([LineX1, LineY1], [LineX2, LineY2], [PointX, PointY]):-
-	onLine([LineX1, LineY1], [LineX2, LineY2], [PointX, PointY]),
-	max(LineX1, LineX2, XMax),
-	min(LineX1, LineX2, XMin),
-	max(LineY1, LineY2, YMax),
-	min(LineY1, LineY2, YMin),
-	XMin <= PointX,  PointX <= XMax,
-	YMin <= PointY,  PointY <= YMax.
-
-% Проверка "Точка принадлежит прямой"
- onLine([LineX1, LineY1], [LineX2, LineY2], [PointX, PointY]):-
-	LineX1 <> LineX2, 
-	LineY1 <> LineY2,
-	K = (LineY2 - LineY1) / (LineX2 - LineX1),
-	B = LineY1 - K * LineX1,
-	PointY = K * PointX + B .
-*/
 % Сложение координат двух точек
  sumPoints([Point1X, Point1Y], [Point2X, Point2Y], [PointX, PointY]):-
 	PointX = Point1X + Point2X,
 	PointY = Point1Y + Point2Y.
-
-
-	
