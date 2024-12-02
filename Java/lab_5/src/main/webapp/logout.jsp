@@ -5,5 +5,5 @@
     session.invalidate(); // Завершаем сессию, удаляя все атрибуты
 
     // Перенаправление пользователя на страницу входа
-    response.sendRedirect("index.jsp");
+    response.sendRedirect("login.jsp");
 %>

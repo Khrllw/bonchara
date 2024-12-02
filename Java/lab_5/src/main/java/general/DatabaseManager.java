@@ -1,75 +1,133 @@
 package general;
 
+import data.Dream;
+
 import java.sql.*;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class DatabaseManager {
-    // Параметры подключения к базе данных
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/dreams";
-    private static final String ACCESS_USER = "root";
-    private static final String ACCESS_PASSWORD = "0000";
+    public static Connection connection;
 
-    // Подключение к БД
-    private static Connection connection;
-
-    // Получение URL БД
-    public static String getDbUrl() {
-        return DB_URL;
-    }
-
-    // Получение логина root-пользоателя БД
-    public static String getRoot() {
-        return ACCESS_USER;
-    }
-
-    // Получение пароля root-пользоателя БД
-    public static String getPassword() {
-        return ACCESS_PASSWORD;
-    }
-
-    // Добавление новой записи в таблицу БД "Users"
-    public static boolean registerUser(String username, String password, String email) {
-
-        String query = "INSERT INTO Users (username, password, email) VALUES (?, MD5(?), ?)";
-
-        try (Connection connection = DriverManager.getConnection(DB_URL, ACCESS_USER, ACCESS_PASSWORD);
-             PreparedStatement statement = connection.prepareStatement(query)) {
-
-            statement.setString(1, username);
-            statement.setString(2, password);
-            statement.setString(3, email);
-
-            int rowsAffected = statement.executeUpdate();
-            return rowsAffected > 0;
-
+    static {
+        try {
+            connection = DatabaseConnector.connect();
         } catch (SQLException e) {
-            System.out.println("Error registering user: " + e.getMessage());
-            return false;
+            throw new RuntimeException(e);
         }
     }
 
-    // Поиск записи в таблице БД "Users"
-    public static Integer loginUser(String username, String password) {
 
+    // Добавление новой записи в таблицу БД "Users"
+    public static Integer insertToUsers(String username, String password, String email) {
+
+        // Проверяем зарегистрирован ли пользователь
+        if (findUser(username, password) == null) {
+
+            // Шаблон запроса на добавление новой записи в таблицу БД "Users"
+            String query = "INSERT INTO Users (username, password, email) VALUES (?, MD5(?), ?)";
+
+            // Подготовка запроса
+            try (PreparedStatement statement = connection.prepareStatement(query)) {
+
+                statement.setString(1, username);
+                statement.setString(2, password);
+                statement.setString(3, email);
+
+                int rowsAffected = statement.executeUpdate();
+                // Возвращает true, если запись успешно добавлена
+                if (rowsAffected > 0) return 0;
+                return 2;
+            }
+            // Вывод ошибки
+            catch (SQLException e) {
+                System.out.println("Error: " + e.getMessage());
+                return 2;
+            }
+        }
+        return 1;
+    }
+
+
+    // Поиск записи в таблице БД "Users"
+    public static Integer findUser(String username, String password) {
+
+        // Шаблон поиска записи в таблице БД "Users"
         String query = "SELECT user_id FROM Users WHERE username = ? AND password = MD5(?)";
 
-        try (Connection connection = DriverManager.getConnection(DB_URL, ACCESS_USER, ACCESS_PASSWORD);
-             PreparedStatement statement = connection.prepareStatement(query)) {
+        // Подготовка запроса
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, username);
             statement.setString(2, password);
             ResultSet result = statement.executeQuery();
 
+            // Возвращает user_id, если пользователь найден
             if (result.next()) {
                 return result.getInt("user_id");
             } else {
                 return null;
             }
-
-        } catch (SQLException e) {
-            System.out.println("Error logging in: " + e.getMessage());
+        }
+        // Вывод ошибки
+        catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
             return null;
         }
     }
+
+    public static List<Dream> getDreams(int userId) throws SQLException, ParseException {
+        List<Dream> dreams = new ArrayList<>();
+        // Шаблон поиска записи в таблице БД "Dreams"
+        String query = "SELECT * FROM Dreams WHERE user = " + userId;
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(query);
+        while (resultSet.next()) {
+            String name = resultSet.getString("name");
+            Date date = resultSet.getDate("date");
+            int quality = resultSet.getInt("quality");
+            Boolean dream = resultSet.getBoolean("dream");
+            String description = resultSet.getString("description");
+            dreams.add(new Dream(name, date, quality, dream, description));
+
+        }
+        System.out.printf(dreams.toString());
+        return dreams;
+    }
+/*
+    // Добавление новой записи в таблицу БД "Dreams"
+    public static Integer insertToDreams(String username, String password, String email) {
+
+        // Проверяем зарегистрирован ли пользователь
+        if (findUser(username, password) == null) {
+
+            // Шаблон запроса на добавление новой записи в таблицу БД "Users"
+            String query = "INSERT INTO Users (username, password, email) VALUES (?, MD5(?), ?)";
+
+            // Подготовка запроса
+            try (PreparedStatement statement = connection.prepareStatement(query)) {
+
+                statement.setString(1, username);
+                statement.setString(2, password);
+                statement.setString(3, email);
+
+                int rowsAffected = statement.executeUpdate();
+                // Возвращает true, если запись успешно добавлена
+                if (rowsAffected > 0) return 0;
+                return 2;
+            }
+            // Вывод ошибки
+            catch (SQLException e) {
+                System.out.println("Error: " + e.getMessage());
+                return 2;
+            }
+        }
+        return 1;
+    }
+*/
+}
 
 /*
     public static List<Dream> getAllRoutes() {
@@ -112,5 +170,5 @@ public class DatabaseManager {
     }
 }*/
 
-}
+
 

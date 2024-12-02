@@ -1,27 +1,43 @@
-// Обработка формы входа
-$(document).ready(function() {
+// Функция обработки формы авторизации
+function sendFormData() {
 
-// Вызов функции при нажатии кнопки входа в аккаунт
-$('#sign_in').click(function () {
-    $.ajax({
-        // URL-имя сервлета для обработки данных
-        url: 'login',
+    // Получение данных формы
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-        // Передаваемые сервлету данные
-        data: {
-            username: $('#username').val(),
-            password: $('#password').val()
-        },
+    // Формирование HTTP запроса
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "loginServlet", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-        // Обработка ответа от сервера
-        success: function (response) {
-            // Вывод сообщения об ошибке
-            if (response != null) {
-                alert(response);
+    // Обработка ответа сервера
+    xhr.onload = function () {
+        let response;
+
+        // Ответ успешно получен
+        if (xhr.status === 200) {
+            response = Number(xhr.responseText);
+            switch (response) {
+                case 1:
+                    // Вывод сообщения об ошибке
+                    alert("Invalid username or password");
+                    break;
+                case 0:
+                    // Перенаправление в линый кабинет пользователя
+                    location.replace( window.location.protocol + "//" + location.host + "/lab_5_war"+ "/showDreams.jsp");
             }
-            console.log("RESP " + response);
-            alert(response);
-            $("header").text(response);
         }
-    });
-});});
+        // Вывод сообщения об ошибке
+        else {
+            alert("Error: " + xhr.status);
+        }
+    };
+
+    // Подготовка данных для запроса
+    var data =
+        "username=" + encodeURIComponent(username) +
+        "&password=" + encodeURIComponent(password);
+
+    // Отправка запроса сервлету
+    xhr.send(data);
+}

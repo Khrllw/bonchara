@@ -1,23 +1,45 @@
-// Обработка формы регистрации
-// Вызов функции при нажатии кнопки регистрации новго пользователя
-$('#sign_up').click(function () {
-    $.ajax({
-        // URL-имя сервлета для обработки данных
-        url: 'register',
+// Функция обработки формы регистрации
+function sendFormData() {
 
-        // Передаваемые сервлету данные
-        data: {
-            username: $('#username').val(),
-            password: $('#password').val(),
-            email: $('#email').val()
-        },
+    // Получение данных формы
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
 
-        // Обработка ответа от сервера
-        success: function (response) {
-            // Вывод сообщения об ошибке
-            if (response != null) {
-                alert(response);
+    // Формирование HTTP запроса
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "registerServlet", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    // Обработка ответа сервера
+    xhr.onload = function () {
+        let response;
+
+        // Ответ успешно получен
+        if (xhr.status === 200) {
+            response = Number(xhr.responseText);
+
+            // Обработка ответа сервера
+            switch (response){
+                // Перенаправление на страницу авторизации
+                case 0: alert("Registration was successful"); location.replace(window.location.protocol + "//" + location.host + "/lab_5_war/"); break;
+                // Вывод сообщения об ошибке
+                case 1: alert("The user already exists"); break;
+                case 2: alert("Something went wrong"); break;
             }
         }
-    });
-});
+        // Вывод сообщения об ошибке
+        else {
+            alert("Error: " + xhr.status);
+        }
+    };
+
+    // Подготовка данных для запроса
+    var data =
+        "username=" + encodeURIComponent(username) +
+        "&password=" + encodeURIComponent(password) +
+        "&email=" + encodeURIComponent(email);
+
+    // Отправка запроса сервлету
+    xhr.send(data);
+}

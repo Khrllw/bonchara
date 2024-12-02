@@ -1,9 +1,8 @@
 package general;
 
-import java.io.Closeable;
 import java.sql.*;
 
-public class DatabaseConnector implements Closeable {
+public class DatabaseConnector {
     // Параметры подключения к базе данных
     private static final String DB_URL = "jdbc:mysql://localhost:3306/dreams";
     private static final String ACCESS_USER = "root";
@@ -11,7 +10,6 @@ public class DatabaseConnector implements Closeable {
 
     // Подключение к БД
     public static Connection connection;
-
 
     // Получение URL БД
     public static String getDbUrl() {
@@ -29,15 +27,15 @@ public class DatabaseConnector implements Closeable {
     }
 
     // Создание подключения к БД
-    public Connection connect() throws SQLException {
-        if (connection == null){
+    public static Connection connect() throws SQLException {
+        if (connection == null) {
             connection = DriverManager.getConnection(DB_URL, ACCESS_USER, ACCESS_PASSWORD);
         }
         return connection;
     }
 
     // Удаления подключения к БД
-    public void close() {
+    public static void close() {
         if (connection != null) {
             try {
                 connection.close();
