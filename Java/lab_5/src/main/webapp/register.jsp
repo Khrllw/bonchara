@@ -9,28 +9,29 @@
   <meta charset="UTF-8">
   <title>Sign up</title>
   <script src="js/register.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/body.css">
 </head>
 
 <body>
-<h1 id="header">Registration</h1>
 
+<h1 id="header">Sign up</h1><br>
+  <div class="form-wrap">
 <!-- Форма регистрации -->
 <form>
-  <label for="username">Username</label>
-  <input type="text" id="username" name="username" required><br><br>
+  <br><input type="text" id="username" name="username" placeholder="Username"><br>
 
-  <label for="password">Password</label>
-  <input type="password" id="password" name="password" required><br><br>
+  <label for="password"></label><input type="password" id="password" name="password" placeholder="Password" required><br>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" required><br><br>
+  <label for="email"></label><input type="email" id="email" name="email" placeholder="Email" required><br><br>
 
   <button type="button" id="sign_up" onclick="sendFormData()">Sign up</button>
 </form>
-
+  </div>
 <!-- Форма авторизации -->
 <form action="login.jsp">
-  <button type="submit">Login</button>
+  <button type="submit"  style="background: none; width: max-content;">Registered? Login</button>
 </form>
 
 </body>

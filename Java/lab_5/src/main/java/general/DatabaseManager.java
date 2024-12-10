@@ -14,7 +14,7 @@ public class DatabaseManager {
     static {
         try {
             connection = DatabaseConnector.connect();
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -50,13 +50,41 @@ public class DatabaseManager {
         return 1;
     }
 
+    // Добавление новой записи в таблицу БД "Dreams"
+    public static Integer insertToDreams(int user_id, String name, java.sql.Date date, int quality, int dream, String description) {
+
+        // Шаблон запроса на добавление новой записи в таблицу БД "Dreams"
+        String query = "INSERT INTO Dreams (user, name, date, quality, dream, description) VALUES (?, ?, ?, ?, ?)";
+
+        // Подготовка запроса
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+
+            statement.setInt(1, user_id);
+            statement.setString(2, name);
+            statement.setDate(3, date);
+            statement.setInt(4, quality);
+            statement.setInt(5, dream);
+            statement.setString(6, description);
+
+            int rowsAffected = statement.executeUpdate();
+            // Возвращает true, если запись успешно добавлена
+            if (rowsAffected > 0) return 0;
+            return 1;
+        }
+        // Вывод ошибки
+        catch (SQLException e) {
+            System.out.println("Error: " + e.getMessage());
+            return 1;
+        }
+    }
+
 
     // Поиск записи в таблице БД "Users"
     public static Integer findUser(String username, String password) {
 
         // Шаблон поиска записи в таблице БД "Users"
         String query = "SELECT user_id FROM Users WHERE username = ? AND password = MD5(?)";
-
+        System.out.printf("hey from finder\n");
         // Подготовка запроса
         try (PreparedStatement statement = connection.prepareStatement(query)) {
 

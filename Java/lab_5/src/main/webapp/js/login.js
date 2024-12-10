@@ -24,7 +24,7 @@ function sendFormData() {
                     break;
                 case 0:
                     // Перенаправление в линый кабинет пользователя
-                    location.replace( window.location.protocol + "//" + location.host + "/lab_5_war"+ "/showDreams.jsp");
+                    location.replace( window.location.protocol + "//" + location.host + "/lab_5_war_exploded"+ "/showDreams.jsp");
             }
         }
         // Вывод сообщения об ошибке

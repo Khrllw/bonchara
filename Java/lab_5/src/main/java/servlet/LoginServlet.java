@@ -5,6 +5,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.Objects;
+
 import general.DatabaseManager;
 import jakarta.servlet.http.HttpSession;
 
@@ -22,7 +24,7 @@ public class LoginServlet extends HttpServlet {
         Integer user_id = DatabaseManager.findUser(username, password);
 
         // Возвращает user_id, если пользователь найден
-        if (user_id != null){
+        if (user_id != null && !username.isEmpty() && !password.isEmpty()){
             // Объявление переменных сессии
             HttpSession session = request.getSession();
             session.setAttribute("user_id", user_id);

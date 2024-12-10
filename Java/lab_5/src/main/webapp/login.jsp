@@ -9,25 +9,29 @@
     <meta charset="UTF-8">
     <title>Sign in</title>
     <script src="js/login.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/body.css">
 </head>
 
 <body>
-<h1 id="header">Login</h1>
 
-<!-- Форма авторизации -->
-<form>
-    <label for="username">Useranme</label>
-    <input type="text" id="username" name="username" required><br><br>
+<h1 id="header">Login</h1><br>
+<div class="form-wrap">
+    <!-- Форма авторизации -->
+    <form>
+        <br><label for="username"></label><input type="text" id="username" name="username" placeholder="Username" required><br>
 
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required><br><br>
+        <label for="password"></label><input type="password" id="password" name="password" placeholder="Password" required><br><br>
 
-    <button type="button" id="sign_in" onclick="sendFormData()">Sign in</button>
-</form>
-
+        <button type="button" id="sign_in"
+                onclick="sendFormData()">Sign in
+        </button>
+    </form>
+</div>
 <!-- Форма регистрации -->
 <form action="register.jsp">
-    <button type="submit">Registration</button>
+    <button type="submit" style="background: none; width: max-content;">Not registered? Sign up</button>
 </form>
 
 </body>

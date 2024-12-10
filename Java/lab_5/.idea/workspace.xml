@@ -2,53 +2,57 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="lab_5:war" />
+      <artifact name="lab_5:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03804e03-83a2-4834-b8f2-bea1f1c43345" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab_5.zip" beforeDir="false" />
+    <list default="true" id="71c253af-e4ea-4523-ae8b-a106651ef41b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../lab_1/MarketModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/MarketModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_1/lab_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/lab_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/MarketModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/MarketModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/lab_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/lab_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_2/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_2/Quote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_2/out/production/lab_2/Quote.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_2/out/production/lab_2/Quote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/LogClc.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/LogClc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/lab_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/lab_3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_4/lab_4/SuccessfulLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_4/lab_4/SuccessfulLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/019c5dd6-9186-4dba-95b4-51716886a365.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/019c5dd6-9186-4dba-95b4-51716886a365.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/019c5dd6-9186-4dba-95b4-51716886a365.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/019c5dd6-9186-4dba-95b4-51716886a365/storage_v2/_src_/schema/dreams.0HgasQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Dream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/general/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/general/DatabaseConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/general/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/general/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/general/JsScriptHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/app-ajax.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/logout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/logout.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/showDreams.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showDreams.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="Jsp File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/general/DatabaseManager.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -57,10 +61,17 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2pHA1SFn5u7nwFky08h83CfHg5s" />
+  <component name="ProjectId" id="2ptFgjCVEYFQ1qV0G2L81OYZ3Eb" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -71,24 +82,22 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 10.1.33.executor&quot;: &quot;Run&quot;,
+    &quot;Tomcat Server.Tomcat .executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alyona/Documents/bonchara/Java/lab_5/src/main/webapp/js&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/khrll/Documents/bonchara/Java/lab_5&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.27586207&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5091954&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -99,22 +108,30 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\alyona\Documents\bonchara\Java\lab_5\src\main\webapp\js" />
-      <recent name="C:\Users\alyona\Documents\bonchara\Java\lab_5\src\main\webapp" />
+      <recent name="C:\Users\khrll\Documents\bonchara\Java\lab_5\src\main\java\com\web\lab_5" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\khrll\Documents\bonchara\Java\lab_5\src\main\webapp" />
+      <recent name="C:\Users\khrll\Documents\bonchara\Java\lab_5\src\main\resources\images" />
+      <recent name="C:\Users\khrll\Documents\bonchara\Java\lab_5\src\main\resources" />
+      <recent name="C:\Users\khrll\Documents\bonchara\Java\lab_5\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="servlet" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 10.1.33" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.33" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="openjdk-22" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
+    <configuration name="Tomcat " type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat " ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="openjdk-22">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <deployment>
-        <artifact name="lab_5:war">
+        <artifact name="lab_5:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/lab_5_war" />
+            <option name="CONTEXT_PATH" value="/lab_5_war_exploded" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="103f2f89-9db2-4413-ab5c-805a4e8bc328" />
+        <option name="BASE_DIRECTORY_NAME" value="5515a5dd-d434-42ab-af58-8895caeaca97" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -122,7 +139,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="60273" />
+        <option name="DEBUG_PORT" value="61925" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -187,7 +204,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="lab_5:war" />
+          <artifact name="lab_5:war exploded" />
         </option>
       </method>
     </configuration>
@@ -203,20 +220,38 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="03804e03-83a2-4834-b8f2-bea1f1c43345" name="Changes" comment="" />
-      <created>1732412413291</created>
+      <changelist id="71c253af-e4ea-4523-ae8b-a106651ef41b" name="Changes" comment="" />
+      <created>1733577577682</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1732412413291</updated>
-      <workItem from="1732412414308" duration="834000" />
-      <workItem from="1732413263932" duration="5675000" />
-      <workItem from="1732443099098" duration="16610000" />
-      <workItem from="1733076561789" duration="13718000" />
-      <workItem from="1733090365469" duration="20254000" />
+      <updated>1733577577682</updated>
+      <workItem from="1733577578651" duration="5100000" />
+      <workItem from="1733582717827" duration="3498000" />
+      <workItem from="1733586251587" duration="220000" />
+      <workItem from="1733586498610" duration="1011000" />
+      <workItem from="1733592394603" duration="245000" />
+      <workItem from="1733592813359" duration="2477000" />
+      <workItem from="1733595371061" duration="413000" />
+      <workItem from="1733595807995" duration="151000" />
+      <workItem from="1733595979400" duration="227000" />
+      <workItem from="1733596264685" duration="1859000" />
+      <workItem from="1733768541448" duration="1470000" />
+      <workItem from="1733770027503" duration="15871000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

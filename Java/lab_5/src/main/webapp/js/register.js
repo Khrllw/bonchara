@@ -5,7 +5,7 @@ function sendFormData() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var email = document.getElementById("email").value;
-
+    console.log("OK");
     // Формирование HTTP запроса
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "registerServlet", true);
@@ -14,18 +14,19 @@ function sendFormData() {
     // Обработка ответа сервера
     xhr.onload = function () {
         let response;
-
+        console.log("OK");
         // Ответ успешно получен
         if (xhr.status === 200) {
             response = Number(xhr.responseText);
-
+            console.log(response);
             // Обработка ответа сервера
             switch (response){
                 // Перенаправление на страницу авторизации
-                case 0: alert("Registration was successful"); location.replace(window.location.protocol + "//" + location.host + "/lab_5_war/"); break;
+                case 0: alert("Registration was successful"); location.replace(window.location.protocol + "//" + location.host + "/lab_5_war_exploded/"); break;
                 // Вывод сообщения об ошибке
                 case 1: alert("The user already exists"); break;
                 case 2: alert("Something went wrong"); break;
+                case 3: alert("Invalid username or password"); break;
             }
         }
         // Вывод сообщения об ошибке

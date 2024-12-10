@@ -1,6 +1,6 @@
 package lab_4;
 
-// Класс-обработчик успешной авторизации пользователя
+// Класс-обработчик успешной авторизации пользовател
 public class SuccessfulLogin extends LoginState {
     @Override
     public void getLoginState(LoginState authProvider) {

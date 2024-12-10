@@ -3,6 +3,7 @@ package general;
 import java.sql.*;
 
 public class DatabaseConnector {
+
     // Параметры подключения к базе данных
     private static final String DB_URL = "jdbc:mysql://localhost:3306/dreams";
     private static final String ACCESS_USER = "root";
@@ -27,8 +28,9 @@ public class DatabaseConnector {
     }
 
     // Создание подключения к БД
-    public static Connection connect() throws SQLException {
+    public static Connection connect() throws SQLException, ClassNotFoundException {
         if (connection == null) {
+            //Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DB_URL, ACCESS_USER, ACCESS_PASSWORD);
         }
         return connection;

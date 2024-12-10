@@ -11,7 +11,7 @@ public class Quote {
 
         // проверка корректности ввода
         if (dt_splt.length < 2 || dt_splt[0].length() == 0 || dt_splt[dt_splt.length - 1].length() == 0) {
-            System.out.print("[ Error: Incorrect input ]");
+            System.out.print("[ Error: Incorrect input ]\n");
             return;
         }
 
@@ -46,9 +46,11 @@ public class Quote {
         System.out.printf("\t\033[1;31m\" %s \"\033[0m\n", this.quote);
 
         // форматированный вывод автора
-        for (int i = 0; i < this.quote.length(); i++) {
-            System.out.print(" ");
+        if (quote != null) {
+            for (int i = 0; i < this.quote.length(); i++) {
+                System.out.print(" ");
+            }
+            System.out.printf("%s\n", this.author);
         }
-        System.out.printf("%s\n", this.author);
     }
 }
