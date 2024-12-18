@@ -3,6 +3,14 @@
     --Accent-rgb: rgb(25, 25, 112);
 }
 
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+    width: 0;
+}
+
+footer {
+    height: 40px;
+}
 
 body {
     /*SIZE AND BEHAVIOR*/
@@ -11,7 +19,7 @@ body {
     align-items: center;
     align-content: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     gap: 10px;
     justify-content: center;
 
@@ -34,6 +42,18 @@ body {
 
 h1 {
     color: white;
+    cursor: default;
+}
+
+h2 {
+    cursor: default;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-wrap, .block-wrap {
@@ -52,7 +72,7 @@ h1 {
     /*BACKGROUND*/
     background: #FFFFFF;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
-    backdrop-filter: blur(10.649999618530273px);
+    backdrop-filter: blur(10px);
     transition: 10s visibility;
 }
 
@@ -66,6 +86,7 @@ form {
 
 button {
     background-color: var(--Accent-rgb);
+    align-self: center;
     border-radius: 2vw;
     color: white;
     width: max-content;
@@ -98,7 +119,8 @@ table {
     color: midnightblue;
     border-collapse: collapse;
 }
-table tr{
+
+table tr {
     text-align: center;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -107,7 +129,7 @@ table tr{
 
 table th {
     font-weight: bold;
-    padding: 5px;
+    padding: 5px 15px;
     background: white;
     text-align: center;
 }
@@ -127,6 +149,7 @@ table td {
 table thead tr th:first-child {
     border-radius: 20px 0 0 0;
 }
+
 table thead tr th:last-child {
     border-radius: 0 20px 0 0;
 }
@@ -134,16 +157,56 @@ table thead tr th:last-child {
 table tbody tr:last-child td:first-child {
     border-radius: 0 0 0 20px;
 }
+
 table tbody tr:last-child td:last-child {
-    border-radius: 0 0 20px 0;}
+    border-radius: 0 0 20px 0;
+}
 
 table thead tr th:first-child {
     border-radius: 20px 0 0 0;
 }
+
 table thead tr th:last-child {
     border-radius: 0 20px 0 0;
 }
 
-table tr:last-child{
+table tr:last-child {
     border-bottom: none;
+}
+
+.table-input {
+    background-color: transparent;
+    border: none;
+    width: fit-content;
+    text-align: center;
+}
+
+.table-input::placeholder {
+    color: mediumvioletred;
+}
+
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+    color: mediumvioletred;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    display: none
+}
+
+select {
+    background: transparent;
+    color: midnightblue;
+    border: none;
+    padding: 5px 30px 5px 10px; /* Резервируем место под стрелку */
+    border-radius: 4px;
+    -webkit-appearance: none; /* Стиль для Safari */
+    -moz-appearance: none; /* Стиль для Firefox */
+    appearance: none; /* Стиль для прочих браузеров */
+}
+
+select:active {
+    border: transparent;
 }

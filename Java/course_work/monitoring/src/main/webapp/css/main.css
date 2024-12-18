@@ -1,0 +1,219 @@
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    padding-bottom: 15px;
+}
+
+h2 {
+    font-size: 3.5rem;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 0.9rem;
+}
+
+body {
+
+}
+
+[hidden] {
+    display: none;
+}
+
+/*DESKTOP LARGE*/
+@media screen and (min-width: 1440px) {
+    header {
+        font-size: max(min(1.5vw, 20px), 20px);
+    }
+
+    .main-menu li {
+        font-size: max(1.1vw, 30px);
+    }
+
+    .main-menu li:hover {
+        font-size: max(1.3vw, 34px);
+    }
+
+    .main-menu .active {
+        font-size: max(1.3vw, 32px);
+    }
+
+    form {
+        font-size: min(1vw, 20px);
+    }
+
+    .form-wrap {
+        padding: min(2vw, 30px) min(3vw, 40px);
+        border-radius: 70px;
+    }
+}
+
+/*DESKTOP*/
+@media handheld, screen and (max-width: 1440px) and (min-width: 1024px) {
+    header {
+
+        font-size: max(min(1.5vw, 20px), 20px);
+    }
+
+    .main-menu li {
+        font-size: max(1.1vw, 30px);
+    }
+
+    .main-menu li:hover {
+        font-size: max(1.3vw, 34px);
+    }
+
+    .main-menu .active {
+        font-size: max(1.3vw, 32px);
+    }
+
+    form {
+        font-size: min(1.5vw, 18px);
+    }
+
+    .form-wrap {
+        padding: min(2vw, 30px) min(3vw, 40px);
+        border-radius: 60px;
+    }
+
+    .popup-form-wrap {
+        padding: 24px 40px;
+    }
+}
+
+
+/*TABLET*/
+@media (max-width: 1024px) and (min-width: 768px) {
+    header {
+
+        font-size: max(min(1.5vw, 20px), 20px);
+    }
+
+    .main-menu li {
+        font-size: max(1vw, 30px);
+    }
+
+    .main-menu li:hover {
+        font-size: max(1.2vw, 34px);
+    }
+
+    .main-menu .active {
+        font-size: max(1.2vw, 32px);
+    }
+
+    form {
+        font-size: min(2vw, 18px);
+    }
+
+    .form-wrap {
+        padding: min(3vw, 35px) min(3vw, 40px);
+    }
+}
+
+/*SMARTPHONE*/
+@media (max-width: 768px) and (min-width: 425px) {
+    header {
+        font-size: max(min(1.5vw, 20px), 18px);
+    }
+
+    h4 {
+        font-size: max(0.8vw, 16px);
+    }
+
+    .main-menu li {
+        font-size: max(1vw, 22px);
+    }
+
+    .main-menu li:hover {
+        font-size: max(1.2vw, 26px);
+    }
+
+    .main-menu .active {
+        font-size: max(1.2vw, 26px);
+    }
+
+    form {
+        font-size: min(3.5vw, 16px);
+    }
+
+    .form-wrap {
+        padding: min(4vw, 35px) min(5vw, 40px);
+    }
+}
+
+/*SMARTPHONE MINI*/
+@media all and (max-width: 425px) {
+    header {
+
+        font-size: max(min(1.5vw, 20px), 18px);
+    }
+
+    .main-menu li {
+        font-size: max(1vw, 22px);
+    }
+
+    .main-menu li:hover {
+        font-size: max(1.2vw, 26px);
+    }
+
+    .main-menu .active {
+        font-size: max(1.2vw, 26px);
+    }
+
+    form {
+        font-size: min(3vw, 12px);
+    }
+
+    .form-wrap {
+        padding: min(5vw, 35px) min(6vw, 30px);
+        border-radius: 40px;
+    }
+}
+
+/*
+.auto            { cursor: auto; 20%}
+.default         { cursor: url('path-to-image.png'), auto; }
+.none            { cursor: none; }
+.context-menu    { cursor: context-menu; }
+.help            { cursor: help; }
+.pointer         { cursor: pointer; }
+.progress        { cursor: progress; }
+.wait            { cursor: wait; }
+.cell            { cursor: cell; }
+.crosshair       { cursor: crosshair; }
+.text            { cursor: text; }
+.vertical-text   { cursor: vertical-text; }
+.alias           { cursor: alias; }
+.copy            { cursor: copy; }
+.move            { cursor: move; }
+.no-drop         { cursor: no-drop; }
+.not-allowed     { cursor: not-allowed; }
+.all-scroll      { cursor: all-scroll; }
+.col-resize      { cursor: col-resize; }
+.row-resize      { cursor: row-resize; }
+.n-resize        { cursor: n-resize; }
+.e-resize        { cursor: e-resize; }
+.s-resize        { cursor: s-resize; }
+.w-resize        { cursor: w-resize; }
+.ns-resize       { cursor: ns-resize; }
+.ew-resize       { cursor: ew-resize; }
+.ne-resize       { cursor: ne-resize; }
+.nw-resize       { cursor: nw-resize; }
+.se-resize       { cursor: se-resize; }
+.sw-resize       { cursor: sw-resize; }
+.nesw-resize     { cursor: nesw-resize; }
+.nwse-resize     { cursor: nwse-resize; }*/

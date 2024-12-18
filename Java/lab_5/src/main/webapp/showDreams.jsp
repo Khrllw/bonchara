@@ -17,29 +17,33 @@
 <body style="color: white; justify-content: start;">
 
 <div class="account-header">
-    <h2>User: <%=session.getAttribute("username")%>
-    </h2>
+    <div style="width: 30%">
+        <h2>User: <%=session.getAttribute("username")%>
+        </h2>
+    </div>
     <!-- Кнопка для выхода из системы -->
-    <form action="logout.jsp" method="post">
-        <button type="submit" style="background: white; color: midnightblue;">Add entry</button>
-    </form>
-    <!-- Кнопка для выхода из системы -->
-    <form action="logout.jsp" method="post">
-        <button type="submit" style="background: white; color: midnightblue;">Exit</button>
-    </form>
+    <div style="width: 30%">
+        <button style="background: none; color: white; padding: 10px;" id="update-button">Update</button>
+    </div>
+    <div style="width: 30%">
+        <!-- Кнопка для выхода из системы -->
+        <form action="logout.jsp" method="post">
+            <button type="submit" style="background: white; color: midnightblue;">Exit</button>
+        </form>
+    </div>
 </div>
 <h1>Dreams info</h1>
-<table border="1">
+<table id="editableTable">
     <thead>
     <tr>
-        <th>Сон</th>
-        <th>Дата</th>
-        <th>Качество сна</th>
-        <th>Сновидения</th>
-        <th>Описание</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Sleep quality</th>
+        <th>Dreams</th>
+        <th>Description</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody id="editableTable-tbody">
     <%
         List<Dream> dreams = null;
         try {
@@ -51,38 +55,54 @@
         for (Dream dream : dreams) {
     %>
     <tr>
+
         <td>
-            <%= dream.getName()%>
+            <label>
+                <input type="text" placeholder="EMPTY" value="<%= dream.getName()%>" class="table-input">
+            </label>
         </td>
         <td>
-            <%= dream.getDate()%>
+            <label>
+                <input type="date" data-placeholder="EMPTY" value="<%= dream.getDate()%>" class="table-input">
+            </label>
         </td>
         <td>
-            <%= dream.getQuality()%>/10
+            <label>
+                <select>
+                    <% int quality = dream.getQuality();%>
+                    <option value=1 <%=quality == 1 ? "selected" : "" %>>1/10</option>
+                    <option value=2 <%=quality == 2 ? "selected" : "" %>>2/10</option>
+                    <option value=3 <%=quality == 3 ? "selected" : "" %>>3/10</option>
+                    <option value=4 <%=quality == 4 ? "selected" : "" %>>4/10</option>
+                    <option value=5 <%=quality == 5 ? "selected" : "" %>>5/10</option>
+                    <option value=6 <%=quality == 6 ? "selected" : "" %>>6/10</option>
+                    <option value=7 <%=quality == 7 ? "selected" : "" %>>7/10</option>
+                    <option value=8 <%=quality == 8 ? "selected" : "" %>>8/10</option>
+                    <option value=9 <%=quality == 9 ? "selected" : "" %>>9/10</option>
+                    <option value=10 <%=quality == 10 ? "selected" : "" %>>10/10</option>
+                </select>
+            </label>
         </td>
         <td>
-            <%= dream.getDream()%>
+            <label>
+                <% boolean dreamState = dream.getDream();%>
+                <select>
+                    <option value=true <%=dreamState ? "selected" : "" %>>true</option>
+                    <option value=false <%=!dreamState ? "selected" : "" %>>false</option>
+                </select>
+            </label>
         </td>
         <td>
-            <%= dream.getDescription()%>
+            <label>
+                <input type="text" placeholder="EMPTY" value="<%= dream.getDescription()%>" class="table-input">
+            </label>
         </td>
             <%}%>
     </tbody>
 </table>
-<form action="showDreams.jsp" method="post">
-    <button type="submit">My dreams info</button>
-</form>
-<!--
-<form method="post">
-    <label for="username">Useranme</label>
-    <input type="text" id="username" name="username" required><br><br>
-
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required><br><br>
-
-    <button type="button" id="sign_in" onclick="sendFormData()">Sign in</button>
-    <button type="submit">My dreams info</button>
-</form>-->
-
+<button id="addButton" style="background: none; color: white; padding: 10px;">Add entry</button>
 </body>
+<script src="js/getEntries.js" type="text/javascript"></script>
+<script src="js/addTableLine.js" type="text/javascript"></script>
+<footer></footer>
 </html>

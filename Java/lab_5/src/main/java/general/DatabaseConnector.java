@@ -30,7 +30,7 @@ public class DatabaseConnector {
     // Создание подключения к БД
     public static Connection connect() throws SQLException, ClassNotFoundException {
         if (connection == null) {
-            //Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(DB_URL, ACCESS_USER, ACCESS_PASSWORD);
         }
         return connection;

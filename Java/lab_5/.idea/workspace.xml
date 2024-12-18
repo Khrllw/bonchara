@@ -10,46 +10,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71c253af-e4ea-4523-ae8b-a106651ef41b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../lab_1/MarketModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/MarketModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_1/lab_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/lab_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/MarketModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/MarketModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/lab_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_1/out/production/lab_1/lab_1/lab_1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_2/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_2/Quote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_2/out/production/lab_2/Quote.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_2/out/production/lab_2/Quote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/LogClc.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/LogClc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/lab_3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_3/out/production/lab_3/lab_3/lab_3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_4/lab_4/SuccessfulLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_4/lab_4/SuccessfulLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bd/proj.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bd/proj.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bd/proj.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bd/proj.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab_3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_3.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/019c5dd6-9186-4dba-95b4-51716886a365.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/019c5dd6-9186-4dba-95b4-51716886a365/storage_v2/_src_/schema/dreams.0HgasQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/918000ed-69d8-4af4-abf9-9017be7a3eee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/918000ed-69d8-4af4-abf9-9017be7a3eee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Dream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/general/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/general/DatabaseConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/general/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/general/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/NewEntryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/NewEntryServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/Test.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/app-ajax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/body.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/body.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/showDreams.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showDreams.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$lab_3.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../~$lab_5.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -68,6 +60,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -81,7 +76,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\khrll\\Documents\\bonchara\\Java\\lab_5\\.idea\\libraries&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
@@ -89,7 +85,7 @@
     &quot;Tomcat Server.Tomcat .executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/khrll/Documents/bonchara/Java/lab_5&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/khrll/Documents/bonchara/Java/lab_5/.idea/libraries/gson-2.11.0.jar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -98,6 +94,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5091954&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -237,6 +234,18 @@
       <workItem from="1733596264685" duration="1859000" />
       <workItem from="1733768541448" duration="1470000" />
       <workItem from="1733770027503" duration="15871000" />
+      <workItem from="1733853937378" duration="18519000" />
+      <workItem from="1733873414766" duration="5054000" />
+      <workItem from="1733878831778" duration="6803000" />
+      <workItem from="1733909556242" duration="8116000" />
+      <workItem from="1733930591858" duration="4979000" />
+      <workItem from="1734027455037" duration="14000" />
+      <workItem from="1734027534186" duration="1891000" />
+      <workItem from="1734040873826" duration="2380000" />
+      <workItem from="1734043665134" duration="634000" />
+      <workItem from="1734210638491" duration="326000" />
+      <workItem from="1734211200090" duration="15522000" />
+      <workItem from="1734344157156" duration="2137000" />
     </task>
     <servers />
   </component>
@@ -253,5 +262,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

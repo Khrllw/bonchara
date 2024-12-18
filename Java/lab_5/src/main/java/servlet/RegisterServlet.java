@@ -10,11 +10,12 @@ import java.io.IOException;
 
 // Регистрация пользователя
 public class RegisterServlet extends HttpServlet {
+    int registerResult;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         request.setCharacterEncoding("UTF-8");
-        int registerResult;
+
         // Получение данных формы
         String username = request.getParameter("username");
         String password = request.getParameter("password");
