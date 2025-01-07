@@ -59,7 +59,7 @@ public class DatabaseManager {
         // Шаблон поиска записи в таблице БД "Users"
         System.out.print("hey from finder\n");
         String query = "SELECT user_id FROM Users WHERE username = ? AND password = MD5(?)";
-
+        System.out.printf(password, username);
         // Подготовка запроса
         try (PreparedStatement statement = connection.prepareStatement(query)) {
 
