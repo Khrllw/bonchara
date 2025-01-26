@@ -10,25 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71c253af-e4ea-4523-ae8b-a106651ef41b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Bd/proj.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bd/proj.mwb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Bd/proj.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bd/proj.mwb.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab_3.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../lab_3.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bd/dreams.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bd/dreams.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Bd/pract_1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Bd/pract_1.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/918000ed-69d8-4af4-abf9-9017be7a3eee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/918000ed-69d8-4af4-abf9-9017be7a3eee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Dream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Dream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/general/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/general/DatabaseConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/general/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/general/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/NewEntryServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/NewEntryServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/body.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/body.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/showDreams.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showDreams.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$lab_3.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../~$lab_5.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +232,8 @@
       <workItem from="1734210638491" duration="326000" />
       <workItem from="1734211200090" duration="15522000" />
       <workItem from="1734344157156" duration="2137000" />
+      <workItem from="1734537750370" duration="2723000" />
+      <workItem from="1734607625268" duration="15000" />
     </task>
     <servers />
   </component>
@@ -268,18 +256,34 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
           <line>27</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="2" />
+          <line>30</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="3" />
+          <url>file://$PROJECT_DIR$/src/main/java/general/DatabaseManager.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/general/DatabaseManager.java</url>
+          <line>12</line>
+          <properties field="connection" class="general.DatabaseManager" />
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
