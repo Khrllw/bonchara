@@ -1,0 +1,260 @@
+[2025-01-17 23:21:54] [INFO] [o.c.ClientConnection] - Установлено защищенное соединение с сервером 127.0.0.1:8040
+[2025-01-17 23:21:54] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 123
+[2025-01-17 23:21:54] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-17 23:21:54] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 04:18:27] [ERROR] [o.c.ClientConnection] - Ошибка при установлении соединения: 
+java.net.SocketException: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+	at javax.net.ssl.DefaultSSLSocketFactory.throwException(SSLSocketFactory.java:263) ~[?:?]
+	at javax.net.ssl.DefaultSSLSocketFactory.createSocket(SSLSocketFactory.java:277) ~[?:?]
+	at org.clientchat.ClientConnection.connect(ClientConnection.java:59) ~[chat-client-1.0.jar:?]
+	at org.clientchat.ClientConnection.<init>(ClientConnection.java:37) ~[chat-client-1.0.jar:?]
+	at org.clientchat.ClientApp.connectToServer(ClientApp.java:137) ~[chat-client-1.0.jar:?]
+	at org.clientchat.ClientApp.handleLogin(ClientApp.java:125) ~[chat-client-1.0.jar:?]
+	at org.clientchat.ClientApp.lambda$showLoginWindow$1(ClientApp.java:73) ~[chat-client-1.0.jar:?]
+	at org.clientchat.UIHandler.lambda$createEnterButton$0(UIHandler.java:71) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49) ~[chat-client-1.0.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[chat-client-1.0.jar:?]
+	at javafx.scene.Node.fireEvent(Node.java:8875) ~[chat-client-1.0.jar:?]
+	at javafx.scene.control.Button.fire(Button.java:203) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54) ~[chat-client-1.0.jar:?]
+	at javafx.event.Event.fireEvent(Event.java:198) ~[chat-client-1.0.jar:?]
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3984) ~[chat-client-1.0.jar:?]
+	at javafx.scene.Scene.processMouseEvent(Scene.java:1890) ~[chat-client-1.0.jar:?]
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301) ~[chat-client-1.0.jar:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:400) ~[?:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424) ~[chat-client-1.0.jar:?]
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449) ~[chat-client-1.0.jar:?]
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:551) ~[chat-client-1.0.jar:?]
+	at com.sun.glass.ui.View.notifyMouse(View.java:937) ~[chat-client-1.0.jar:?]
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method) ~[chat-client-1.0.jar:?]
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263) ~[chat-client-1.0.jar:?]
+	at java.lang.Thread.run(Thread.java:1583) [?:?]
+Caused by: java.security.NoSuchAlgorithmException: Error constructing implementation (algorithm: Default, provider: SunJSSE, class: sun.security.ssl.SSLContextImpl$DefaultSSLContext)
+	at java.security.Provider$Service.newInstance(Provider.java:1927) ~[?:?]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:236) ~[?:?]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:164) ~[?:?]
+	at javax.net.ssl.SSLContext.getInstance(SSLContext.java:185) ~[?:?]
+	at javax.net.ssl.SSLContext.getDefault(SSLContext.java:110) ~[?:?]
+	at javax.net.ssl.SSLSocketFactory.getDefault(SSLSocketFactory.java:83) ~[?:?]
+	at org.clientchat.ClientConnection.connect(ClientConnection.java:58) ~[chat-client-1.0.jar:?]
+	... 50 more
+Caused by: java.security.KeyManagementException: problem accessing trust store
+	at sun.security.ssl.SSLContextImpl$DefaultManagersHolder.<clinit>(SSLContextImpl.java:933) ~[?:?]
+	at sun.security.ssl.SSLContextImpl$DefaultSSLContext.<init>(SSLContextImpl.java:1102) ~[?:?]
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at java.security.Provider$Service.newInstanceOf(Provider.java:1938) ~[?:?]
+	at java.security.Provider$Service.newInstanceUtil(Provider.java:1945) ~[?:?]
+	at java.security.Provider$Service.newInstance(Provider.java:1920) ~[?:?]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:236) ~[?:?]
+	at sun.security.jca.GetInstance.getInstance(GetInstance.java:164) ~[?:?]
+	at javax.net.ssl.SSLContext.getInstance(SSLContext.java:185) ~[?:?]
+	at javax.net.ssl.SSLContext.getDefault(SSLContext.java:110) ~[?:?]
+	at javax.net.ssl.SSLSocketFactory.getDefault(SSLSocketFactory.java:83) ~[?:?]
+	at org.clientchat.ClientConnection.connect(ClientConnection.java:58) ~[chat-client-1.0.jar:?]
+	... 50 more
+[2025-01-18 14:04:36] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 14:04:36] [INFO] [o.c.MessageHandler] - Сообщение отправлено: f
+[2025-01-18 14:04:37] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 14:04:37] [INFO] [o.c.MessageHandler] - Сообщение получено: f подключился!
+[2025-01-18 14:04:37] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 14:04:39] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:39:19] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:39:20] [INFO] [o.c.MessageHandler] - Сообщение отправлено: gdff
+[2025-01-18 20:39:20] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 20:39:20] [INFO] [o.c.MessageHandler] - Сообщение получено: gdff подключился!
+[2025-01-18 20:39:20] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 20:39:24] [INFO] [o.c.MessageHandler] - Сообщение отправлено: s
+[2025-01-18 20:39:29] [INFO] [o.c.MessageHandler] - Сообщение получено: /error Разрыв соединения!
+[2025-01-18 20:39:30] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:40:58] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:40:58] [INFO] [o.c.MessageHandler] - Сообщение отправлено: Админ1270018040
+[2025-01-18 20:40:58] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Админ1270018040
+[2025-01-18 20:40:58] [INFO] [o.c.MessageHandler] - Сообщение получено: Админ1270018040 подключился!
+[2025-01-18 20:40:58] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 20:41:13] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:41:13] [INFO] [o.c.MessageHandler] - Сообщение отправлено: р
+[2025-01-18 20:41:13] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 20:41:13] [INFO] [o.c.MessageHandler] - Сообщение получено: р подключился!
+[2025-01-18 20:41:13] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 20:41:37] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:41:37] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 20:43:39] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:43:40] [INFO] [o.c.MessageHandler] - Сообщение отправлено: пп
+[2025-01-18 20:43:40] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 20:43:40] [INFO] [o.c.MessageHandler] - Сообщение получено: пп подключился!
+[2025-01-18 20:43:40] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 20:43:43] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:43:43] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 20:46:19] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:46:20] [INFO] [o.c.MessageHandler] - Сообщение отправлено: р
+[2025-01-18 20:46:20] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 20:46:20] [INFO] [o.c.MessageHandler] - Сообщение получено: р подключился!
+[2025-01-18 20:46:20] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 20:46:22] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:46:22] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 20:53:56] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:53:57] [INFO] [o.c.MessageHandler] - Сообщение отправлено: мс
+[2025-01-18 20:53:57] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 20:53:57] [INFO] [o.c.MessageHandler] - Сообщение получено: мс подключился!
+[2025-01-18 20:53:57] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 20:53:59] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:55:29] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:55:29] [INFO] [o.c.MessageHandler] - Сообщение отправлено: ти
+[2025-01-18 20:55:30] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 20:55:30] [INFO] [o.c.MessageHandler] - Сообщение получено: ти подключился!
+[2025-01-18 20:55:30] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 20:55:39] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:55:40] [INFO] [o.c.MessageHandler] - Сообщение отправлено: ти
+[2025-01-18 20:55:40] [INFO] [o.c.MessageHandler] - Сообщение получено: /error Имя пользователя 'ти' уже занято!
+[2025-01-18 20:55:42] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:56:03] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 20:56:04] [INFO] [o.c.MessageHandler] - Сообщение отправлено: о
+[2025-01-18 20:56:04] [INFO] [o.c.MessageHandler] - Сообщение получено: о подключился!
+[2025-01-18 20:56:04] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 20:56:04] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 20:56:04] [INFO] [o.c.MessageHandler] - Сообщение получено: о подключился!
+[2025-01-18 20:56:04] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 20:56:07] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 20:56:07] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 20:56:11] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 20:56:11] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 21:20:21] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 21:20:21] [INFO] [o.c.MessageHandler] - Сообщение отправлено: hgvc
+[2025-01-18 21:20:22] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 21:20:22] [INFO] [o.c.MessageHandler] - Сообщение получено: hgvc подключился!
+[2025-01-18 21:20:22] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 21:20:25] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 21:20:25] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 21:24:05] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 21:24:06] [INFO] [o.c.MessageHandler] - Сообщение отправлено: ор
+[2025-01-18 21:24:06] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 21:24:06] [INFO] [o.c.MessageHandler] - Сообщение получено: ор подключился!
+[2025-01-18 21:24:06] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 21:24:09] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:06:43] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:06:43] [INFO] [o.c.MessageHandler] - Сообщение отправлено: Админ1270018040
+[2025-01-18 23:06:43] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Админ1270018040
+[2025-01-18 23:06:43] [INFO] [o.c.MessageHandler] - Сообщение получено: Админ1270018040 подключился!
+[2025-01-18 23:06:43] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 23:06:45] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:06:45] [INFO] [o.c.MessageHandler] - Сообщение отправлено: ldfkl
+[2025-01-18 23:06:45] [INFO] [o.c.MessageHandler] - Сообщение получено: ldfkl подключился!
+[2025-01-18 23:06:45] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 23:06:46] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:06:46] [INFO] [o.c.MessageHandler] - Сообщение получено: ldfkl подключился!
+[2025-01-18 23:06:46] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 23:06:49] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:06:49] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040,ldfkl
+[2025-01-18 23:06:52] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:06:52] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040,ldfkl
+[2025-01-18 23:06:55] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:06:55] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040,ldfkl
+[2025-01-18 23:06:55] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /kick ldfkl
+[2025-01-18 23:06:55] [INFO] [o.c.MessageHandler] - Сообщение получено: /banned Вы были отключены Администратором!
+[2025-01-18 23:06:55] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:06:55] [INFO] [o.c.MessageHandler] - Сообщение получено: Пользователь ldfkl был отключён Администратором
+[2025-01-18 23:06:55] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 23:06:58] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:06:58] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040
+[2025-01-18 23:07:01] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:07:01] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040
+[2025-01-18 23:07:04] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040
+[2025-01-18 23:07:04] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:07:07] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040
+[2025-01-18 23:07:07] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:07:10] [INFO] [o.c.MessageHandler] - Сообщение отправлено: /list
+[2025-01-18 23:07:10] [INFO] [o.c.MessageHandler] - Сообщение получено: /users Админ1270018040
+[2025-01-18 23:07:14] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:07:17] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:08:33] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:08:33] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 1
+[2025-01-18 23:08:34] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:08:34] [INFO] [o.c.MessageHandler] - Сообщение получено: 1 подключился!
+[2025-01-18 23:08:34] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 23:08:35] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:08:35] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 2
+[2025-01-18 23:08:35] [INFO] [o.c.MessageHandler] - Сообщение получено: 2 подключился!
+[2025-01-18 23:08:35] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 3
+[2025-01-18 23:08:36] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:08:36] [INFO] [o.c.MessageHandler] - Сообщение получено: 2 подключился!
+[2025-01-18 23:08:36] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 3
+[2025-01-18 23:09:21] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:09:21] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:09:22] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:09:22] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:10:16] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:10:17] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 1
+[2025-01-18 23:10:17] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:10:17] [INFO] [o.c.MessageHandler] - Сообщение получено: 1 подключился!
+[2025-01-18 23:10:17] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 23:10:18] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:10:18] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 2
+[2025-01-18 23:10:18] [INFO] [o.c.MessageHandler] - Сообщение получено: 2 подключился!
+[2025-01-18 23:10:18] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 23:10:18] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:10:18] [INFO] [o.c.MessageHandler] - Сообщение получено: 2 подключился!
+[2025-01-18 23:10:18] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 23:10:22] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:10:22] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:10:30] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:10:30] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:13:43] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:13:43] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 1
+[2025-01-18 23:13:43] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:13:43] [INFO] [o.c.MessageHandler] - Сообщение получено: 1 подключился!
+[2025-01-18 23:13:43] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 23:13:53] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:13:53] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 22
+[2025-01-18 23:13:53] [INFO] [o.c.MessageHandler] - Сообщение получено: 22 подключился!
+[2025-01-18 23:13:53] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 23:13:53] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:13:53] [INFO] [o.c.MessageHandler] - Сообщение получено: 22 подключился!
+[2025-01-18 23:13:53] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 2
+[2025-01-18 23:13:54] [WARN] [o.c.ClientConnection] - Соединение закрыто
+[2025-01-18 23:13:54] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:15:35] [INFO] [o.c.ClientConnection] - Установлено защищённое соединение с сервером 127.0.0.1:8040
+[2025-01-18 23:15:35] [INFO] [o.c.MessageHandler] - Сообщение отправлено: 1
+[2025-01-18 23:15:36] [INFO] [o.c.MessageHandler] - Сообщение получено: /role Пользователь
+[2025-01-18 23:15:36] [INFO] [o.c.MessageHandler] - Сообщение получено: 1 подключился!
+[2025-01-18 23:15:36] [INFO] [o.c.MessageHandler] - Сообщение получено: Количество пользователей на сервере: 1
+[2025-01-18 23:15:37] [INFO] [o.c.MessageHandler] - Соединение успешно закрыто!
+[2025-01-18 23:15:37] [WARN] [o.c.ClientConnection] - Соединение закрыто
