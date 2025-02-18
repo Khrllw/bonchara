@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: lightgrey;
+    padding: 2%;
+    margin: auto;
+    align-items: center;
+    border-radius: 2%;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2px;
+    border: none;
+}
